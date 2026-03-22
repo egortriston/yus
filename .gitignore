@@ -8,6 +8,7 @@ dist/
 dist-electron/
 release/
 release-fixed5/
+release-yus-*/
 storage/
 backend/storage/
 backend/.env

@@ -1,7 +1,7 @@
 {
   "name": "ai-meeting-assistant",
-  "version": "0.1.0",
-  "description": "Desktop AI meeting assistant for recording, transcription and story generation",
+  "version": "0.1.1",
+  "description": "YUS desktop assistant for meeting capture, transcription and story generation",
   "author": "Codex",
   "private": true,
   "type": "module",
@@ -37,7 +37,7 @@
   },
   "build": {
     "appId": "com.ycs.ai-meeting-assistant",
-    "productName": "AI Meeting Assistant",
+    "productName": "YUS",
     "directories": {
       "output": "release"
     },
