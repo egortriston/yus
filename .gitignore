@@ -6,9 +6,9 @@ __pycache__/
 node_modules/
 dist/
 dist-electron/
-release/**
-!release/
-!release/YUS Setup 0.1.2.exe
+release/win-unpacked/
+release/**/__pycache__/
+release/**/*.pyc
 release-build-*/
 release-final-*/
 release-fixed5/
