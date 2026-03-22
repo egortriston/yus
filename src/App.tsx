@@ -32,6 +32,8 @@ export function App() {
   return (
     <div className="app-shell">
       <aside className="shell-sidebar">
+        <h1 className="sidebar-title">YUS</h1>
+
         <nav className="shell-nav">
           {tabs.map((item) => (
             <button
