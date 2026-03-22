@@ -1,0 +1,9 @@
+{
+  "name": "ui-kit",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "tailwindcss": "4.0.17"
+  }
+}

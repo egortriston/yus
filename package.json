@@ -1,0 +1,71 @@
+{
+  "name": "ai-meeting-assistant",
+  "version": "0.1.0",
+  "description": "Desktop AI meeting assistant for recording, transcription and story generation",
+  "author": "Codex",
+  "private": true,
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "electron:dev": "tsc -p electron/tsconfig.json && electron .",
+    "electron:build": "tsc -p electron/tsconfig.json",
+    "app:dev": "concurrently \"npm run dev -- --port 5180 --strictPort\" \"wait-on http://localhost:5180 && npm run electron:dev\"",
+    "check": "tsc --noEmit && tsc -p electron/tsconfig.json --noEmit",
+    "package:dir": "npm run build && npm run electron:build && electron-builder --win dir",
+    "package:exe": "npm run build && npm run electron:build && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.66.8",
+    "clsx": "^2.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2",
+    "wait-on": "^8.0.2"
+  },
+  "build": {
+    "appId": "com.ycs.ai-meeting-assistant",
+    "productName": "AI Meeting Assistant",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "backend",
+        "to": "backend",
+        "filter": [
+          "**/*",
+          "!__pycache__/**",
+          "!*.pyc"
+        ]
+      }
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
