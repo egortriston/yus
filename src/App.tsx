@@ -32,11 +32,6 @@ export function App() {
   return (
     <div className="app-shell">
       <aside className="shell-sidebar">
-        <div className="brand-block">
-          <div className="brand-mark">YUS</div>
-          <h1>YUS</h1>
-        </div>
-
         <nav className="shell-nav">
           {tabs.map((item) => (
             <button

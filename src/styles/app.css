@@ -62,42 +62,15 @@ select {
 .shell-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 12px;
   padding: 20px 16px;
   background: rgba(20, 20, 24, 0.94);
   border-right: 1px solid var(--color-border-subtle);
 }
 
-.brand-block {
-  display: grid;
-  justify-items: start;
-  gap: 12px;
-  padding: 10px 8px 4px;
-}
-
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(255, 107, 53, 0.22), rgba(255, 107, 53, 0.08));
-  border: 1px solid var(--color-border-accent);
-  color: #fff1ea;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.brand-block h1,
 .workspace-panel h3,
 .workspace-panel h4 {
   margin: 0;
-}
-
-.brand-block h1 {
-  font-size: 26px;
-  line-height: 1;
 }
 
 .shell-nav {
@@ -606,6 +579,46 @@ select {
 
 .settings-grid {
   grid-template-columns: minmax(0, 1.15fr) minmax(420px, 0.95fr);
+}
+
+.settings-panel h3 {
+  font-size: 22px;
+}
+
+.settings-panel .field-label {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.settings-panel .field-input,
+.settings-panel .form-grid input,
+.settings-panel .form-grid select {
+  min-height: 42px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.settings-panel .toggle-card-inline {
+  min-height: 42px;
+  padding: 10px 12px;
+  gap: 8px;
+  align-items: center;
+}
+
+.settings-panel .toggle-card-inline span {
+  font-size: 13px;
+}
+
+.settings-panel .toggle-card-inline input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.settings-panel .secondary,
+.settings-panel .ghost {
+  font-size: 13px;
 }
 
 @media (max-width: 1180px) {

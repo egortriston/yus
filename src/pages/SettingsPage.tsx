@@ -108,7 +108,7 @@ export function SettingsPage() {
         </div>
       </section>
 
-      <section className="workspace-panel">
+      <section className="workspace-panel settings-panel">
         <div className="workspace-panel-header">
           <div className="title-row">
             <h3>Настройки провайдеров</h3>
